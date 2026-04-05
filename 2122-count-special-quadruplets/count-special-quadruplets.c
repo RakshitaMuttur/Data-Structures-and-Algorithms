@@ -10,11 +10,10 @@ int countQuadruplets(int* nums, int numsSize)
             for(int k=j+1; k<numsSize-1;k++)
             {
                 int c=nums[k];
+                int s=a+b+c;
                 for(int l=k+1; l<numsSize;l++)
                 {
-                    int d=nums[l];
-                    int s=a+b+c;
-                    if(s==d) count++;
+                    if(s==nums[l]) count++;
                 }
             }
         }
