@@ -1,0 +1,1 @@
+This repository contains my solutions to various Data Structures and Algorithms (DSA) problems that I’ve been practicing. It covers topics like arrays, strings, linked lists, stacks, queues, trees, graphs, recursion, and dynamic programming.
