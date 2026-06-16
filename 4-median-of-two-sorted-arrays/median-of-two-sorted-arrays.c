@@ -22,10 +22,6 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
     {
         merge[k++]=nums2[j++];
     }
-for(int p=0;p<total;p++)
-    {
-        printf("%d ",merge[p]);
-    }
     if(total % 2 ==0 )
     {
        return (double)(merge[(total/2)-1]+merge[total/2])/2;
