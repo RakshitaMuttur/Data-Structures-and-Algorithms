@@ -2,17 +2,14 @@ class Solution {
 public:
     int getSum(int a, int b) 
     {
-            while(b>0)
-            {
-                b--;
-                a++;
-            }
-            while(b<0)
-            {
-                a--;
-                b++;
-            }
-            return a;
+        int carry;
+        while(b!=0)
+        {
+            carry=a&b;
+            a=a^b;
+            b=carry<<1;
+        }
+        return a;
        
     }
 };
