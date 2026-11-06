@@ -16,7 +16,6 @@ public:
             {
                 min=std::min(intervals[i][0], merge_vec[j][0]);
                 max=std::max(intervals[i][1], merge_vec[j][1]);
-                std::vector<int> vec = {min, max};
                 merge_vec[j][0]=min;
                 merge_vec[j][1]=max;
             }
