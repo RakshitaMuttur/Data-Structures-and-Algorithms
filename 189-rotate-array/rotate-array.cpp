@@ -2,27 +2,17 @@ class Solution {
 public:
     void rotate(vector<int>& nums, int k) 
     {
-        int n;
-        int l= nums.size();
-        int j=0;
-        std::vector <int> rot_num;
-        std::stack<int> s;
-        k=k%l;
-        for(int i=l-1; i>=l-k; i--)
+        k=k%nums.size();
+        if(nums.size()==0 || nums.size()==1)
         {
-            s.push(nums[i]);
+            nums=nums;
+        }
+        else
+        {
+            std::reverse(nums.begin(), nums.end());
+            std::reverse(nums.begin(), nums.begin()+k);
+            std::reverse(nums.begin()+k, nums.end());
         }
 
-        while(!s.empty())
-        {
-            rot_num.push_back(s.top());
-            s.pop();
-        }
-
-        for(int i=0; i<l-k; i++)
-        {
-            rot_num.push_back(nums[i]);
-        }
-        nums=rot_num;
     }
 };
